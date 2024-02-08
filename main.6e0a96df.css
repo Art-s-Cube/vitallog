@@ -1,0 +1,451 @@
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
+    margin: 0
+}
+
+code {
+    font-family: source-code-pro,Menlo,Monaco,Consolas,Courier New,monospace
+}
+.Calculator--Form {
+  width: fit-content;
+  margin: auto;
+  background-color: #efefef;
+  padding: 2em;
+  padding-top: 2em;
+  margin-bottom: 2em;
+  height: 100%;
+  margin-top: 2em;
+}
+
+.Calculator--Form h1 {
+  color: #68829d;
+  font-size: 1.5rem;
+  margin-top: 0em;
+  margin-bottom: 1.3em;
+  font-weight: 500;
+}
+
+.Calculator--Container {
+  margin-top: 1em;
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  flex-wrap: wrap;
+
+}
+
+.Calculator--Container--Child {
+  margin-top: 0em;
+  display: flex;
+  flex-direction: row;
+  width: fit-content;
+  flex-wrap: wrap;
+
+}
+
+.Calculator--Component {
+  min-width: 5em;
+  background-color: white;
+  border: 1px solid #cdcdcd;
+font-size:16px;
+}
+
+.Calculator--Component--Child {
+  min-width: 5em;
+  background-color: white;
+  border: 1px solid #cdcdcd;
+  border-top: none;
+  height: 6em;
+}
+
+.Calculator--Component--Remove {
+  min-width: 5em;
+  background-color: transparent;
+}
+
+.Calculator--Component select {
+  width: 15em;
+  padding: 0.5em;
+  margin: 2em 0.4em;
+}
+
+.Calculator--Component--Child select {
+  width: 15em;
+  padding: 0.5em;
+  margin: 2em 0.4em;
+}
+
+/* ensures the increment/decrement arrows always display */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  opacity: 1;
+}
+
+.Calculator--Component input {
+  width: 4em;
+  padding: 0.5em;
+  margin: 2em 0.4em;
+}
+
+.Calculator--Component input[type=radio] {
+  width: 2.5em;
+  margin: 0.5em;
+  margin-top:2.5em;
+}
+
+
+.Calculator--Component--RadioText{
+margin-right:0.7em;
+}
+
+.Calculator--Component--Child input {
+  width: 4em;
+  padding: 0.4em;
+  margin: 2em;
+}
+
+.Calculator--Component--Child input[type=radio] {
+  width: 2.5em;
+  margin: 0.5em;
+  margin-top:2.5em;
+}
+
+.Calculator--Component--ValueDisplay {
+  min-width: 2em;
+  margin: 2em;
+  text-align: center;
+}
+
+.Calculator--Component--Remove button {
+  padding: 0.4em;
+  margin: 2em;
+  background-color: #f6921c;
+  color: white;
+  border: none;
+}
+
+.Calculator--Component--Remove--Child button {
+  padding: 0.4em;
+  margin: 2em;
+  background-color: #f6921c;
+  color: white;
+  border: none;
+}
+
+.Calculator--Title {
+  background-color: #68829d;
+  color: white;
+  text-align: center;
+  padding: 0.5em;
+  height: 1.5em;
+}
+
+.Calculator--Title--Child {
+  display: none;
+}
+
+.Calculator--Component--Remove .Calculator--Title {
+  background-color: transparent;
+}
+
+.Calculator--CombinedResults {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 5em;
+  margin-top: 0;
+}
+
+.Calculator--CombinedResults--Day {
+  min-width: 5em;
+  margin: 2em;
+  margin-top: 0.5em;
+  text-align: center;
+  font-weight: lighter;
+}
+
+.Calculator--CombinedResults--Week {
+  min-width: 5em;
+  margin: 2em;
+  margin-top: 0.5em;
+  text-align: center;
+  font-weight: lighter;
+}
+
+.Calculator--Buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.Calculator--Buttons button {
+  background-color: #f6921c;
+  padding: 0.5em;
+  margin: 0.2em;
+  width: fit-content;
+  border: none;
+  color: white;
+}
+
+.Calculator--ShowResults {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0em;
+  margin-right: 5em;
+  justify-content: space-between;
+
+
+}
+
+.Results--Container {
+  display: flex;
+  flex-direction: column;
+}
+
+.Results--Single--Container {
+  display: flex;
+  flex-direction: row;
+  width: 40em;
+  background-color: #68829d;
+  padding: 0.8em 0.8em 0.8em 0;
+  margin-bottom: 0.2em;
+  align-items: center;
+}
+
+.Results--Button {
+  text-align: right;
+  width: 14em;
+}
+
+.Results--Button button,
+.Calculator--ContactForm--InputName button {
+  background-color: #f6921c;
+  padding: 0.3em 0.5em 0.3em 0.5em;
+  margin: 0.2em;
+  width: fit-content;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+
+}
+
+button#cancelquote.Calculator--ContactForm--CancelBtn{
+  background-color: #afaeae;
+  padding: 0.3em 0.5em 0.3em 0.5em;
+  margin: 0.2em;
+  width: fit-content;
+  border: none;
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.Results--Image {
+  width: 7em;
+  text-align: center;
+}
+
+.Results--Text {
+  color: #ffffff;
+  width: 20em;
+}
+
+.Results--Text--Byline {
+  font-weight: normal;
+  display: block;
+  font-size: 1rem;
+}
+
+.Results--Text--Byline--Debug {
+  font-weight: lighter;
+  display: block;
+  font-size: 0.9rem;
+}
+
+.Results--Text--Title {
+  display: block;
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding-bottom:0.3em;
+}
+.Results--Text a:link{
+  text-decoration: none;
+  color:inherit;
+}
+.Results--Text a:visited{
+  text-decoration: none;
+  color:inherit;
+}
+.Results--Image a:link{
+  text-decoration: none;
+  color:inherit;
+}
+.Results--Image a:visited{
+  text-decoration: none;
+  color:inherit;
+}
+
+.Calculator--ContactForm--Container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: 0em;
+  margin-right: 5em;
+}
+
+.Calculator--ContactForm--InputContainer {
+  display: flex;
+  flex-direction: column;
+  background-color: #68829d;
+  width: 40em;
+  padding: 0.8em 0.8em 0.8em 0;
+  color: #ffffff;
+  margin-bottom: 5em;
+}
+
+.Calculator--ContactForm--InputContainer > span {
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding-bottom: 1em;
+  padding-left: 0.8em;
+}
+
+.Calculator--ContactForm--InputRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding-bottom: 1.3em;
+}
+
+.Calculator--ContactForm--InputName {
+  width: 10em;
+  padding-left: 1em;
+}
+
+.Calculator--ContactForm--InputField {
+  text-align: right;
+  width: 25em;
+
+}
+
+.Calculator--ContactForm--InputField > input {
+  padding: 0.4em;
+  width: 25em;
+}
+
+.Calculator--ContactForm--InputField--Quantity > input{
+  padding: 0.4em;
+  width: 3em;
+  margin-left:4em;
+}
+
+.Calculator--Message--Container {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  height: 100%;
+  padding: 1em;
+}
+
+.Calculator--Message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f6921c;
+  background-color: #68829d;
+  padding: 5em;
+  margin: auto;
+  text-align: center;
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: #ffffff;
+  border: 1px solid black;
+}
+.debug{
+  font-size:0.8rem;
+  display:flex;
+  justify-content: left;
+  text-align: left;
+  align-items: left;
+  margin-top:1em;
+  padding:0.8em;
+}
+
+
+.Calculator--ContactForm--InputName>span {
+  color: #f6921c;
+  font-weight: bold;
+
+}
+
+button:hover {
+  background-color: orange;
+}
+
+.Results--Single--Container--Hidden {
+  display: none;
+}
+
+#confirmOverlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 2;
+  cursor: pointer;
+}
+
+.HiddenResult{
+  display:none;
+}
+.VisibleResult{
+  display:inline;
+}
+
+.ShowMoreResults{
+  cursor: pointer;
+  width:100%;
+  display:flex;
+  flex-direction: row-reverse;
+}
+
+.ShowMoreResults span{
+  width:40em;
+  background-color: #5d738c;
+  margin-right: 5em;
+  padding: 0.8em 0.8em 0.8em 0;
+  text-align: center;
+  color:white;
+  font-size: 1em;
+  font-weight: 500;
+}
+
+.Results--Container--NoResults{
+  background-color: white;
+  padding:1em;
+  border:1px solid #f6921c;
+}
+
+.Results--Container--NumberOfResults{
+  text-align:right;
+  padding-bottom:0.5em;
+  font-size:0.9em;
+  color:dimgray;
+}
+.ProductImage{
+  width:5em;
+}
+
+
+
+/*# sourceMappingURL=main.6e0a96df.css.map*/
